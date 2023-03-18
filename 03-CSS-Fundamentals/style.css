@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5rem;
+  font-family: sans-serif;
+  border-top: solid #0e89a4 5px;
+}
+
+/* Pseduo Elements */
+
+h1::first-letter {
+  font-style: normal;
+}
+
+/* h2::before {
+  content: "Top";
+} */
+
+h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: "Top";
+  text-transform: uppercase;
+  padding: 3px 10px;
+  background-color: yellow;
+  font-size: 14px;
+  color: #000;
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  cursor: pointer;
+}
+
+h2 + img {
+  display: block;
+}
+
+/* Link styles */
+a:link {
+  text-decoration: none;
+  color: #0e89a4;
+}
+
+a:visited {
+  color: #333;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+a:active {
+  background-color: #333;
+}
+/* LVHA */
+
+.container {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: #f3f2f3;
+  text-align: center;
+  height: 80px;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+  color: #0e89a4;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.header a {
+  text-decoration: none;
+  color: #0e89a4;
+  margin-right: 50px;
+}
+
+/* Article Styles */
+article header h2 {
+  color: #0e89a4;
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+article header p {
+  font-style: italic;
+}
+
+.main-img {
+  margin-bottom: 1rem;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+/* What is HTML? Styles */
+h3 {
+  color: #0e89a4;
+  margin: 1.5rem 0;
+}
+
+ol,
+ul {
+  margin-left: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+
+/* 
+  List Styles
+  li:first-child{}
+  li:last-child{}
+  li:nth-child(){}
+*/
+
+.first-li {
+  font-weight: bold;
+}
+
+.last-li {
+  font-style: italic;
+}
+
+/* Aside Styles */
+aside {
+  margin: 1rem 0;
+  background-color: #f7f6f7;
+  width: 60%;
+  padding: 1.5rem;
+  border-top: solid #0e89a4 0.3rem;
+  border-bottom: solid #0e89a4 0.3rem;
+  margin-bottom: 0;
+}
+
+aside h4 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+aside li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+aside ul a {
+  font-weight: bold;
+  font-style: normal;
+}
+
+aside ul p {
+  margin-top: -0.3rem;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Like Button Styles */
+
+.button {
+  padding: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}

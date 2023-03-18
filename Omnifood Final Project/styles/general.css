@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font Sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+400 (default)
+500 (medium)
+600 (semi-bold)
+700 (bold)
+
+- Line heights
+1 (default)
+1.05 (Headings h1)
+1.2 (Headings h2)
+1.6 (Medium)
+1.8 (Large)
+
+- Letter spacing
+-0.5px
+0.75px
+
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints: #fdf2e9, #fae5d3, #eb984e
+- Shades: #cf711f, #45260a
+- Accents: 
+- Greys: 
+#888
+#767676
+#6f6f6f
+#555
+#333
+
+--- 05 SHADOWS
+0 2.4rem 4.8rem 0 rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+8px (default)
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #cf711f; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+:root {
+  --primary-color: #e67e22;
+  --tint-color: #fdf2e9;
+  --tint-color-darker: #fae5d3;
+  --primary-color-dark: #cf711f;
+  --dark-shade: #45260a;
+}
+
+html {
+  /* 
+    font-size: 10px;
+    10px / 16px = 0.0625 = 62.5%
+    Percentage of user's browser font-size setting
+  */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  overflow-x: hidden;
+}
+
+/* rem and max-width */
+/* .test {
+  background-color: red;
+  color: #fff;
+  height: 40rem;
+  width: 1000px;
+  max-width: 50rem;
+  font-size: 2rem;
+} */
+
+/* ----------------------------- */
+/* GENERAL REUSABLE STYLES */
+/* ----------------------------- */
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem 6.4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Headings */
+.heading-primary,
+.heading-secondary,
+.heading-teritiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 5.2rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-teritiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--primary-color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+}
+
+/* Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* always put transition in the main state */
+  transition: all 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: var(--primary-color-dark);
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: var(--tint-color);
+  /* Trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: var(--dark-shade);
+  color: var(--tint-color);
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  /* New way of underlining links */
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: var(--primary-color-dark);
+  /* Fixing 1px jump on the page */
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list li {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--primary-color);
+}
+
+/* Helper Classes */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}

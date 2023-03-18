@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  width: 800px;
+  border: #000 solid 5px;
+  margin: 80px auto;
+  position: relative;
+}
+
+.container::before {
+  content: "Sale";
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-color: rgb(209, 31, 31);
+  color: #fff;
+  position: absolute;
+  font-size: 14px;
+  padding: 3px 10px;
+  top: -20px;
+  left: -30px;
+}
+
+h2 {
+  padding: 10px;
+  background-color: #f7f6f7;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cost-p {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.free-p {
+  margin: 10px 0;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.727);
+}
+
+a:link {
+  color: #000;
+  margin: 10px 0;
+  display: inline-block;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+ul {
+  margin-left: 2rem;
+  list-style: square;
+}
+
+button {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  background-color: #000;
+  color: #fff;
+  padding: 3px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border-top: 5px #000 solid;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.color-div {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.color-div:first-child {
+  background-color: #000;
+}
+
+.color-div:nth-child(2) {
+  background-color: blue;
+}
+
+.color-div:nth-child(3) {
+  background-color: red;
+}
+
+.color-div:nth-child(4) {
+  background-color: yellow;
+}
+
+.color-div:nth-child(5) {
+  background-color: green;
+}
+
+.color-div:last-child {
+  background-color: brown;
+}
+
+/* CSS Layouts Float */
+/* 
+.box-1 {
+  float: left;
+  margin-right: 30px;
+  width: 200px;
+}
+
+.box-2 {
+  float: left;
+  margin-right: 30px;
+  width: 300px;
+}
+
+.box-3 {
+  float: right;
+  width: 200px;
+  margin-right: 30px;
+}
+
+footer {
+  clear: both;
+}
+
+footer button {
+  margin-top: -7px;
+}
+
+.cost-p {
+  float: left;
+}
+
+.free-p {
+  float: right;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.ready-p {
+  clear: both;
+}
+
+.colors {
+  margin-top: 30px;
+}
+
+.box-3 ul {
+  margin-left: 15px;
+}
+*/
+
+/* CSS Flexbox Layout Challange */
+/* .layout-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+} */
+
+.box-1,
+.box-2,
+.box-3 {
+  margin-bottom: 0;
+  /* flex: 0 1 auto; */
+}
+
+/* .box-2 {
+  flex: 0 2 auto;
+  align-self: stretch;
+}
+
+.box-3 {
+  flex: 1 1 auto;
+} */
+
+.box-3 h3 {
+  margin: 10px 0;
+}
+
+footer button {
+  margin-top: -7px;
+}
+
+.free-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* CSS Grid Challange */
+.container {
+  display: grid;
+  grid-template-columns: 202px 1fr 1fr;
+  column-gap: 30px;
+
+  align-content: center;
+  align-items: start;
+}
+
+header {
+  grid-column: 1 / -1;
+}
+
+.box-1 {
+}
+
+.box-2 {
+  /* align-self: center; */
+}
+
+.box-3 {
+}
+
+footer {
+  grid-column: 1 / -1;
+}
